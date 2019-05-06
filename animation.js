@@ -24,7 +24,6 @@ function myFunction(e) {
     }
 }
 $(document).ready(function(){
-    
     myApp();
 });
 
@@ -36,6 +35,7 @@ function myApp() {
     _this.init = () => {
         _this.putBulets(0);
         _this.downBullets();
+        _this.collision();
     }
 
     _this.putBulets = (i) => {
@@ -47,7 +47,6 @@ function myApp() {
     }
 
     _this.downBullets = () => {
-
         setTimeout(function () {
             var heigth = $(window).height();
             $("[data-bulet]").each(function (params) {
@@ -59,6 +58,10 @@ function myApp() {
 
             _this.downBullets();
         }, 500);
+    }
+
+    _this.collision = () => {
+        console.log($("#ball").position());
     }
 
     _this.getRandonLeft = () => {

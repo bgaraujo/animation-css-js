@@ -43,7 +43,8 @@ body {
     #ff8213,
     #ff8213 10px,
     #ffc882 10px,
-    #ffc882 20px);
+	#ffc882 20px);
+	z-index: 2;
 }
 .floor::before,
 .floor::after{
